@@ -1,0 +1,57 @@
+@import '../../styles/var';
+
+#connect-modal {
+    label {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .app-id {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+
+        input {
+            margin-top: 10px;
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #00000020;
+        }
+
+        a {
+            font-size: 12px;
+        }
+    }
+
+    .methods {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+
+        small {
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #00000020;
+            margin-bottom: 5px;
+
+            &:hover {
+                background-color: $main;
+                color: #fff;
+            }
+
+            svg {
+                font-size: 20px;
+            }
+        }
+    }
+}

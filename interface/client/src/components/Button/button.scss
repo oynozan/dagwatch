@@ -1,0 +1,32 @@
+@import '../../styles/var';
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 40px;
+    border-radius: 6px;
+    font-family: $inter;
+
+    &.main {
+        color: $light;
+        background: $main;
+
+        &:hover {
+            background: $second;
+        }
+    }
+
+    &.blank {
+        padding: 0;
+    }
+
+    img {
+        height: 22px;
+    }
+}

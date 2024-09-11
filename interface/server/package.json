@@ -1,0 +1,29 @@
+{
+    "name": "dagwatch-interface-server",
+    "version": "1.0.0",
+    "description": "Metagraph Interface Server",
+    "main": "dist/server.js",
+    "scripts": {
+        "start": "tsc && node dist/server.js",
+        "dev": "nodemon server.ts",
+        "pm2": "pm2 start dist/server.js --exp-backoff-restart-delay=100 --name dagwatch",
+        "prettier": "prettier --write \"**/(*.tsx|*.ts|*.jsx|*.js|*.scss|*.css)\""
+    },
+    "author": "oynozan",
+    "license": "MIT",
+    "dependencies": {
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "jsonwebtoken": "^9.0.2",
+        "ts-node-dev": "^2.0.0"
+    },
+    "devDependencies": {
+        "@types/cookie-parser": "^1.4.7",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/jsonwebtoken": "^9.0.6",
+        "@types/node": "^22.0.2"
+    }
+}

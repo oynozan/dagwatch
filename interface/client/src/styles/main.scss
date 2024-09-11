@@ -1,0 +1,100 @@
+@import "var";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $light;
+    font-family: $inter;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    transition: 200ms;
+    text-decoration: none;
+    font-family: $inter;
+    cursor: pointer;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+button {
+    transition: 200ms;
+    outline: none;
+    border: none;
+    font-family: $inter;
+    background: transparent;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+    }
+}
+
+input,
+textarea {
+    transition: 200ms;
+    outline: none;
+    border: none;
+    font-family: $inter;
+    background: transparent;
+
+    &::placeholder {
+        color: #4a5263;
+    }
+}
+
+::selection {
+    background-color: $main;
+    color: #fff;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    background: $light;
+}
+::-webkit-scrollbar-thumb {
+    background: $lgray;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: $gray;
+}
