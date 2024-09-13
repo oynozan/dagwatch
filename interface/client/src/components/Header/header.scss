@@ -4,10 +4,15 @@ header {
     justify-content: space-between;
     height: 75px;
     padding: 15px;
+    background: #fefefe;
     border-bottom: 1px solid #00000020;
 
     h1 {
         font-size: 25px;
+    }
+
+    img {
+        height: 50px;
     }
 
     .user {

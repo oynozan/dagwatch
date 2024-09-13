@@ -9,7 +9,7 @@ export default function Header() {
 
     return (
         <header>
-            <h1>DAGWatch</h1>
+            <img src="/images/logo.svg" alt="DAGWatch" />
             {user?.wallet ? (
                 <div className="user">
                     <span>{truncateWalletAddress(user.wallet)}</span>

@@ -2,8 +2,8 @@ import { z } from "zod";
 import { Router } from "express";
 import { randomUUID } from "crypto";
 
-import appDB  from "../db/App";
-import { verifyApp } from '../funcs/middlewares';
+import appDB from "../db/App";
+import { verifyApp } from "../funcs/middlewares";
 
 const router = Router();
 
@@ -42,6 +42,19 @@ router.post("/sign-application", async (req, res) => {
     await newApplication.save();
 
     return res.send({ appID, token });
+});
+
+/**
+ * @description Get the details of an application
+ */
+router.get("/details", verifyApp, async (req, res) => {
+    try {
+        const { app } = req as any;
+        return res.send({ name: app.name, redirect: app.redirect, id: app._id });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).send({ error: "An error occured." });
+    }
 });
 
 /**

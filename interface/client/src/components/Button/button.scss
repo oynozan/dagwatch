@@ -22,6 +22,17 @@
         }
     }
 
+    &.light {
+        color: $gray;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        font-weight: 400;
+
+        &:hover {
+            background: #f8f8f8;
+        }
+    }
+
     &.blank {
         padding: 0;
     }

@@ -7,9 +7,13 @@ import { create } from "zustand";
 // User States
 interface IUser {
     appID: string;
+    appName?: string;
+    redirectURL?: string;
     accessToken?: string;
     wallet?: string;
+    email?: string;
     pfp?: string;
+    loginType?: string;
 }
 
 interface UserStore {

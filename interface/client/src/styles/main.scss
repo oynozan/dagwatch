@@ -12,8 +12,10 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: $light;
     font-family: $inter;
+    background-color: $light;
+    background-image: url("../../public/images/background.svg");
+    background-size: 100px;
 }
 
 h1,
@@ -22,6 +24,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: $poppins;
     font-weight: 700;
     margin: 0;
 }
@@ -72,7 +75,7 @@ textarea {
     outline: none;
     border: none;
     font-family: $inter;
-    background: transparent;
+    background: #fff;
 
     &::placeholder {
         color: #4a5263;

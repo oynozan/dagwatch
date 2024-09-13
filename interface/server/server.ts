@@ -1,12 +1,13 @@
 import express, { type Application } from "express";
 import cookieParser from "cookie-parser";
-import cors from "cors";
 import jwt from "jsonwebtoken";
+import cors from "cors";
 
 const app: Application = express();
+const whitelist = ["http://localhost:3000", "https://dagwatch.xyz"];
 
 /* Middlewares */
-app.use(cors({ origin: ["http://localhost:3000"], credentials: true }));
+app.use(cors({ origin: whitelist, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 

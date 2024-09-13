@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Modals from "../components/Modal/Modals";
 
 // Pages
+import Landing from './Landing';
 import Dashboard from "./Dashboard";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
                 <Header />
                 <main>
                     <Routes>
+                        <Route path="/" element={<Landing />} />
                         <Route path="/dashboard/*" element={<Dashboard />} />
                     </Routes>
                 </main>
